@@ -8,4 +8,10 @@ describe('App', () => {
     const wrapper = mount(App)
     expect(wrapper.text()).toContain('You did it!')
   })
+
+  it('View is rendered properly', () => {
+    const wrapper = mount(App)
+    expect(wrapper.findComponent({ name: 'View' }).exists()).toBe(true)
+    expect(wrapper.text()).toContain('This is View component')
+  })
 })
