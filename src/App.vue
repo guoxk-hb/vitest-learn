@@ -8,7 +8,7 @@ import View from './components/View.vue'
     Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
     documentation
   </p>
-  <View></View>
+  <View components="div" aria-label="div" :is-disabled="false">{{ 'This is View component' }}</View>
 </template>
 
 <style scoped></style>

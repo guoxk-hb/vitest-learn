@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  components: string
+  ariaLabel?: string
+  isDisabled?: boolean
+}>()
+</script>
 
 <template>
-  <div>
-    {{ 'This is View component' }}
-  </div>
+  <component :is="components" :aria-label="ariaLabel" :disabled="isDisabled">
+    <slot></slot>
+  </component>
 </template>
