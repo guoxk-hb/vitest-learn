@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// test Utils
 import { ref } from 'vue'
 interface todoItem {
   id: number
@@ -12,11 +13,28 @@ const todos = ref<todoItem[]>([
     completed: false,
   },
 ])
+const newTodo = ref('')
+const createTodo = () => {
+  todos.value.push({
+    id: 2,
+    text: newTodo.value,
+    completed: false,
+  })
+}
 </script>
 <template>
   <div>
-    <div v-for="todo in todos" :key="todo.id" data-test="todo">
+    <div
+      v-for="todo in todos"
+      :key="todo.id"
+      data-test="todo"
+      :class="[todo.completed ? 'completed' : '']"
+    >
+      <input type="checkbox" v-model="todo.completed" data-test="todo-checkbox" />
       {{ todo.text }}
     </div>
+    <form data-test="form" @submit.prevent="createTodo">
+      <input data-test="new-todo" v-model="newTodo" />
+    </form>
   </div>
 </template>
