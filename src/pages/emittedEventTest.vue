@@ -1,4 +1,6 @@
 <script setup lang="ts">
+//测试组件触发
+
 import { ref } from 'vue'
 
 const emits = defineEmits<{
