@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import View from './components/View.vue'
+import AsynchronousBehavior from './pages/asynchronousBehavior.vue'
 import ConditionalRender from './pages/conditionalRender.vue'
 import TodoList from './pages/todoList.vue'
 </script>
@@ -16,6 +17,7 @@ import TodoList from './pages/todoList.vue'
   <TodoList></TodoList>
   <h3>{{ 'Conditional Rendering' }}</h3>
   <ConditionalRender />
+  <AsynchronousBehavior />
 </template>
 
 <style scoped></style>
