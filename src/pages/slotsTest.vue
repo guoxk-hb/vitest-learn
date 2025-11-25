@@ -5,9 +5,9 @@
     <header>
       <slot name="header" />
     </header>
-    <body>
+    <div class="body">
       <slot />
-    </body>
+    </div>
     <footer>
       <slot name="footer" />
     </footer>

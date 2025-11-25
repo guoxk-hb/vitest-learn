@@ -69,8 +69,6 @@ test.concurrent('concurrent test 2', async ({ expect }) => {
 test.sequential('sequential test 1', async () => {})
 test.sequential('sequential test 2', async () => {})
 
-// TODO: 这里要写注释
-
 // 此测试将在报告中显示一个条目。
 test.todo('unimplemented test')
 
@@ -131,4 +129,27 @@ test.each([
   },
 ])('$name + $age -> $expected', ({ name, age, expected }) => {
   expect(name + ' ' + age).toBe(expected)
+})
+
+test.for([
+  {
+    name: 'Jeremy Lin',
+    age: '7',
+    expected: 'Jeremy Lin 7',
+  },
+  {
+    name: 'Yao Ming',
+    age: '11',
+    expected: 'Yao Ming 11',
+  },
+])('$name + $age -> $expected', ({ name, age, expected }, { expect }) => {
+  expect(name + ' ' + age).toBe(expected)
+})
+
+test.for([
+  [1, 2, 3],
+  [1, 2, 3],
+  [1, 2, 3],
+])('add(%i, %i) -> %i', ([a, b, expected]) => {
+  expect(a! + b!).toBe(expected)
 })

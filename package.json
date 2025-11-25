@@ -11,6 +11,7 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
+    "test:bench": "vitest bench",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
@@ -19,7 +20,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "axios": "^1.13.2",
+    "axios": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {
