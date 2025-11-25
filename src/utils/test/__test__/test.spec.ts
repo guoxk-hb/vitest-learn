@@ -82,3 +82,53 @@ function myAsyncFunc() {
 test.fails('fail test', async () => {
   await expect(myAsyncFunc()).rejects.toBe(1)
 })
+
+test.each([
+  [1, 2, 3],
+  [1, 2, 3],
+  [1, 2, 3],
+])('add(%i, %i) -> %i', (a, b, expected) => {
+  expect(a + b).toBe(expected)
+})
+
+test.each([
+  [
+    {
+      name: 'Jeremy Lin',
+      age: '21',
+    },
+    'Jeremy Lin',
+  ],
+  [
+    {
+      name: 'Yao Ming',
+      age: '30',
+    },
+    'Yao Ming',
+  ],
+])('%$ = %s', (obj, expected) => {
+  expect(obj.name).toBe(expected)
+})
+
+test.each([
+  { a: 1, b: 1, expected: 2 },
+  { a: 1, b: 2, expected: 3 },
+  { a: 2, b: 1, expected: 3 },
+])('add($a, $b) -> $expected', ({ a, b, expected }) => {
+  expect(a + b).toBe(expected)
+})
+
+test.each([
+  {
+    name: 'Jeremy Lin',
+    age: '7',
+    expected: 'Jeremy Lin 7',
+  },
+  {
+    name: 'Yao Ming',
+    age: '11',
+    expected: 'Yao Ming 11',
+  },
+])('$name + $age -> $expected', ({ name, age, expected }) => {
+  expect(name + ' ' + age).toBe(expected)
+})
