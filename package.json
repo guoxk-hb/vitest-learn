@@ -21,7 +21,9 @@
   },
   "dependencies": {
     "axios": "catalog:",
-    "vue": "catalog:"
+    "pinia": "^3.0.4",
+    "vue": "catalog:",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@prettier/plugin-oxc": "catalog:",
