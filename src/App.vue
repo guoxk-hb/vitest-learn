@@ -3,6 +3,8 @@ import View from './components/View.vue'
 import AsynchronousBehavior from './pages/asynchronousBehavior.vue'
 import ConditionalRender from './pages/conditionalRender.vue'
 import TodoList from './pages/todoList.vue'
+import UsePinia from './pages/usePinia.vue'
+import VModelText from './pages/vModelTest.vue'
 </script>
 
 <template>
@@ -18,6 +20,9 @@ import TodoList from './pages/todoList.vue'
   <h3>{{ 'Conditional Rendering' }}</h3>
   <ConditionalRender />
   <AsynchronousBehavior />
+
+  <VModelText />
+  <UsePinia />
 </template>
 
 <style scoped></style>
