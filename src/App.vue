@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import View from './components/View.vue'
-import AsynchronousBehavior from './pages/asynchronousBehavior.vue'
-import ConditionalRender from './pages/conditionalRender.vue'
-import TodoList from './pages/todoList.vue'
-import UsePinia from './pages/usePinia.vue'
-import VModelText from './pages/vModelTest.vue'
+import VueRouterTesting from './components/VueRouterTesting.vue'
+
+// import View from './components/View.vue'
+// import AsynchronousBehavior from './pages/asynchronousBehavior.vue'
+// import ConditionalRender from './pages/conditionalRender.vue'
+// import TodoList from './pages/todoList.vue'
+// import UsePinia from './pages/piniaTest.vue'
+// import VModelText from './pages/vModelTest.vue'
 </script>
 
 <template>
   <h1>You did it!</h1>
-  <p>
+  <VueRouterTesting></VueRouterTesting>
+  <router-view></router-view>
+  <!-- <p>
     Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
     documentation
   </p>
@@ -22,7 +26,7 @@ import VModelText from './pages/vModelTest.vue'
   <AsynchronousBehavior />
 
   <VModelText />
-  <UsePinia />
+  <UsePinia /> -->
 </template>
 
 <style scoped></style>

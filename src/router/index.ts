@@ -1,11 +1,22 @@
+import path from 'path'
 import { createRouter, createWebHistory } from 'vue-router'
 
-const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: () => import('../pages/bav.vue'),
-  // },
+export const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('../pages/nav.vue'),
+  },
+  {
+    path: '/pinia',
+    name: 'Pinia',
+    component: () => import('../pages/piniaTest.vue'),
+  },
+  {
+    path: '/todoList',
+    name: 'TodoList',
+    component: () => import('../pages/todoList.vue'),
+  },
 ]
 
 const router = createRouter({

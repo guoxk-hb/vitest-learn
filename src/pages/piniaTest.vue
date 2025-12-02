@@ -20,13 +20,21 @@ const { increment: optionsIncrement } = optionsStore
   <div>
     <div>
       <h3>Setup Store</h3>
-      {{ count }} / {{ doubleCount }}
+      <span data-test="setupCount"> {{ count }} </span>/
+      <span data-test="setupDoubleCount">
+        {{ doubleCount }}
+      </span>
       <button @click="increment">Increment</button>
       <button @click="setupStore.$reset()">Reset</button>
     </div>
     <div>
       <h3>Options Store</h3>
-      {{ optionsCount }} / {{ optionsDoubleCount }}
+      <span>
+        <span data-test="optionsCount">{{ optionsCount }} </span>/
+        <span data-test="optionsDoubleCount">
+          {{ optionsDoubleCount }}
+        </span>
+      </span>
       <button @click="optionsIncrement">Increment</button>
       <button @click="optionsStore.$reset()">Reset</button>
     </div>
