@@ -4,7 +4,7 @@ import { routes } from '@/router'
 
 <template>
   <div>
-    <router-link
+    <!-- <router-link
       v-for="item in routes"
       :key="item.name"
       :to="{ name: item.name! }"
@@ -12,6 +12,7 @@ import { routes } from '@/router'
       :data-test="item.name"
     >
       {{ item.name }}
-    </router-link>
+    </router-link> -->
+    <router-link to="/pinia">Pinia</router-link>
   </div>
 </template>
