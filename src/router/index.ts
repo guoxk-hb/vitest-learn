@@ -13,9 +13,10 @@ export const routes = [
     component: () => import('../pages/piniaTest.vue'),
   },
   {
-    path: '/todoList',
+    path: '/todoList/:id?',
     name: 'TodoList',
     component: () => import('../pages/todoList.vue'),
+    props: true,
   },
 ]
 

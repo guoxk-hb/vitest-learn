@@ -8,7 +8,7 @@ import { assert, beforeEach, describe, expect, test } from 'vitest'
 
 beforeEach(async () => {
   // 每次执行测试前，先重置所有 mock，然后准备好需要用到的测试数据。
-  console.log('Resetting mocks and preparing test data')
+  // console.log('Resetting mocks and preparing test data')
 })
 const person = {
   isActive: true,

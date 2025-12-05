@@ -182,7 +182,7 @@ describe('mock', () => {
     const fn = vi.fn().mockResolvedValueOnce('result')
     const results = fn()
     // expect(fn.mock.settledResults[0]).toEqual({ type: 'pending', value: undefined })
-    console.log(fn.mock.settledResults)
+    // console.log(fn.mock.settledResults)
     await results
     expect(fn.mock.settledResults[0]).toEqual({ type: 'fulfilled', value: 'result' })
   })

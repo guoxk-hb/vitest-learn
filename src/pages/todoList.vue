@@ -21,9 +21,15 @@ const createTodo = () => {
     completed: false,
   })
 }
+
+const { propNumber, id = 888 } = defineProps<{
+  propNumber: number
+  id?: number | string
+}>()
 </script>
 <template>
   <div>
+    propNumber : {{ propNumber }} id: {{ id }}
     <div
       v-for="todo in todos"
       :key="todo.id"

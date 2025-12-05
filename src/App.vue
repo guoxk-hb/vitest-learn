@@ -12,7 +12,7 @@ import VueRouterTesting from './components/VueRouterTesting.vue'
 <template>
   <h1>You did it!</h1>
   <VueRouterTesting></VueRouterTesting>
-  <router-view></router-view>
+  <router-view :prop-number="1"></router-view>
   <!-- <p>
     Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
     documentation

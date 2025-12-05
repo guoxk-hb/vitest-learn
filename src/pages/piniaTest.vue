@@ -14,10 +14,16 @@ const optionsStore = useOptionsStore()
 
 const { count: optionsCount, doubleCount: optionsDoubleCount } = storeToRefs(optionsStore)
 const { increment: optionsIncrement } = optionsStore
+
+const props = defineProps<{
+  propNumber: number
+  id: number
+}>()
 </script>
 
 <template>
   <div>
+    propNumber : {{ props.propNumber }} id: {{ props.id }}
     <div>
       <h3>Setup Store</h3>
       <span data-test="setupCount"> {{ count }} </span>/

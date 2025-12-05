@@ -9,7 +9,7 @@ import { expect, test } from 'vitest'
 test('访问组件实例', async () => {
   const wrapper = mount(ComponentsInstance)
 
-  console.log(wrapper.vm)
+  // console.log(wrapper.vm)
   expect(wrapper.getComponent(View).vm.components).toBe('span')
   expect(wrapper.getComponent(View).props()).toEqual({
     components: 'span',
