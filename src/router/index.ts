@@ -12,6 +12,7 @@ export const routes = [
     name: 'Pinia',
     component: () => import('../pages/piniaTest.vue'),
   },
+  // 动态路由匹配
   {
     path: '/todoList/:id?',
     name: 'TodoList',
