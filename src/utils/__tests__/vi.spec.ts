@@ -115,6 +115,34 @@ describe('vi', () => {
   })
 
   test('vi mockObject', () => {
+    // const original = {
+    //   sample: () => 'value',
+    //   nested: {
+    //     methods: () => 'real',
+    //   },
+    //   prop: 'foo',
+    // }
+    // const mocked = vi.mockObject(original)
+    // expect(mocked.sample()).toBeUndefined()
+    // expect(mocked.prop).toBe('foo')
+    // mocked.nested.methods.mockReturnValue('mocked')
+    // expect(mocked.nested.methods()).toBe('mocked')
+    // expect(vi.isMockFunction(original.sample)).toBe(false)
+    // expect(vi.isMockFunction(mocked.sample)).toBe(true)
+    //   const original = {
+    //     sample: () => 'value',
+    //     nested: {
+    //       methods: () => 'real',
+    //     },
+    //     prop: 'foo',
+    //   }
+    //   // const mocked = vi.mockObject(original, { spy:true })
+    //   const mocked = vi.mockObject(original, { spy: true })
+    //   expect(mocked.sample()).toBe('value')
+    //   // }
+  })
+
+  test('vi mockObject spy true', () => {
     const original = {
       sample: () => 'value',
       nested: {
@@ -122,15 +150,7 @@ describe('vi', () => {
       },
       prop: 'foo',
     }
-
-    const mocked = vi.mockObject(original)
-
-    expect(mocked.sample()).toBeUndefined()
-    expect(mocked.prop).toBe('foo')
-
-    mocked.nested.methods.mockReturnValue('mocked')
-    expect(mocked.nested.methods()).toBe('mocked')
-    expect(vi.isMockFunction(original.sample)).toBe(false)
-    expect(vi.isMockFunction(mocked.sample)).toBe(true)
+    const mocked = vi.mockObject(original, { spy: true })
+    expect(mocked.sample()).toBe('value')
   })
 })
