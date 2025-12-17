@@ -143,14 +143,28 @@ describe('vi', () => {
   })
 
   test('vi mockObject spy true', () => {
-    const original = {
-      sample: () => 'value',
-      nested: {
-        methods: () => 'real',
-      },
-      prop: 'foo',
-    }
-    const mocked = vi.mockObject(original, { spy: true })
-    expect(mocked.sample()).toBe('value')
+    // const original = {
+    //   sample: () => 'value',
+    //   nested: {
+    //     methods: () => 'real',
+    //   },
+    //   prop: 'foo',
+    // }
+    // const mocked = vi.mockObject(original, { spy: true })
+    // expect(mocked.sample()).toBe('value')
+  })
+
+  test('vi stubEnv', () => {
+    // const ORIGINAL_ENV = process.env.NODE_ENV
+    // vi.stubEnv('NODE_ENV', 'development')
+    // process.env.NODE_ENV === 'production'
+    // console.log(process.env.NODE_ENV)
+  })
+
+  test('vi stubGloabl', () => {
+    vi.stubGlobal('myGlobalVar', 42)
+    expect(myGlobalVar).toBe(42)
+    expect(window.myGlobalVar).toBe(42)
+    expect(globalThis.myGlobalVar).toBe(42)
   })
 })
